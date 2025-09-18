@@ -107,7 +107,6 @@ resource "aws_security_group" "demo-sg" {
   }
 }
 
-
   module "sgs" {
   source = "../sg_eks"
   vpc_id = data.aws_vpc.default.id
@@ -125,3 +124,6 @@ module "eks" {
 output "eks_cluster_endpoint" {
   value = module.eks.endpoint
 }
+
+
+ 
